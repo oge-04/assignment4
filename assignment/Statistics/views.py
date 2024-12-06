@@ -5,5 +5,3 @@ from .forms import UploadFileForm
 
 # Create your views here.
 
-def homepage(request):
-    if request.method == 'Post'
