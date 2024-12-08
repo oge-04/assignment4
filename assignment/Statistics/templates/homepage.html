@@ -18,18 +18,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarsExample02">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                </ul>
-                <form role="search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </form>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="button" class="btn btn-dark">
+                    Unique Numbers <span class="badge text-bg-secondary" id="uniqueNumberCount">{{ unique_count }}</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -42,21 +34,18 @@
         <div class="card-body">
             <h5 class="card-title">Select .txt File to Upload or Enter List of Numbers</h5>
             <p> Numbers must be in a comma-separated list.</p>
-            <div class="input-group mb-3">
-                <input type="file" class="form-control" id="inputGroupFile02">
-                <button class="input-group-text" for="inputGroupFile02">Upload</button>
-            </div>
+            <form method = "post", enctype="multipart/form-data" action="{% url 'results' %}">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02">
+                    <button class="input-group-text" for="inputGroupFile02">Upload</button>
+                </div>
+            </form>
+           
         </div>
 
 
     </div>
-
-
-
-
-
-
-
 
 
 
