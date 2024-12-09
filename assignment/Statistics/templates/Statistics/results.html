@@ -12,12 +12,9 @@
 <body>
     <div>
         <h2 for="string"> Sum</h2>
-        <label class="prompt" for="string">The sum of all the numebrs</label>
+        <label class="prompt" for="string">The sum of all the numbers</label>
         <br>
-        <input type="text" id="stringInput" placeholder="Enter String">
-        <button id="submitButton1" onclick="reverseString()">Submit</button>
-        <br>
-        <p for="stringInput" id="stringOutput" class="output">{{ sum }}</p>
+        <p for="sumInput" id="sumOutput" class="output">{{ list_sum }}</p>
     </div>
     <div>
         <h2 for="string"> Mean</h2>
@@ -41,13 +38,13 @@
         <h2 for="string"> Range</h2>
         <label class="prompt" for="string">The difference between the largest and smallest numbers.</label>
         <br>
-        <p for="rangeInput" id="rangeOutput" class="output">{{ range }}</p>
+        <p for="rangeInput" id="rangeOutput" class="output">{{ list_range }}</p>
     </div>
     <div>
         <h2 for="string"> Prime numbers</h2>
         <label class="prompt" for="string">List of all prime numbers</label>
         <br>
-        <p for="primeInput" id="primeOutput" class="output"></p>
+        <p for="primeInput" id="primeOutput" class="output">{{ prime_numbers }}</p>
     </div>
     <div>
         <h2 for="string"> Armstrong numbers</h2>

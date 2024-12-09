@@ -34,19 +34,18 @@
         <div class="card-body">
             <h5 class="card-title">Select .txt File to Upload or Enter List of Numbers</h5>
             <p> Numbers must be in a comma-separated list.</p>
-            <form method = "post", enctype="multipart/form-data" action="{% url 'results' %}">
+            <form method = "POST", enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="input-group mb-3">
                     <input type="file" class="form-control" id="inputGroupFile02">
-                    <button class="input-group-text" for="inputGroupFile02">Upload</button>
+                    <input type="text" class="form-control" placeholder="Input Numbers in a comma-separated list ONLY" >
+                    <button type="submit" class="input-group-text" for="inputGroupFile02">Upload</button>
                 </div>
             </form>
            
         </div>
 
-
     </div>
-
 
 
 
